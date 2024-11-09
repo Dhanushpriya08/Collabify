@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+
+.page-footer {
+  background: #1E1E1E;
+  margin: auto;
+  width: 80vw;
+  align-items: center;
+  height: 5rem;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Subtle grid background pattern */
+.page-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 768px) {
+  .page-footer {
+    width: 90vw;
+    padding: 0 1rem;
+    height: auto;
+    min-height: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

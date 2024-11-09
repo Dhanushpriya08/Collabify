@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+
+.fin {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  font-size: 1rem;
+  transition: var(--transition-standard);
+  background: #2D2D2D;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: var(--primary-color);
+  box-shadow: var(--shadow-soft);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Form validation styles */
+input:invalid {
+  border-bottom-color: #E74C3C;
+}
+
+input:valid {
+  border-bottom-color: #2ECC71;
+}
+
+/* Add tech-themed focus indicator */
+input:focus::before {
+  content: '>';
+  position: absolute;
+  left: -1rem;
+  color: var(--primary-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Add subtle hover effect */
+input:hover {
+  background: #353535;
+}
+
+@media only screen and (max-width: 768px) {
+  input {
+    font-size: 16px; /* Prevents zoom on mobile devices */
+  }
+  
+  .fin {
+    margin-bottom: 1rem;
+  }
+}
